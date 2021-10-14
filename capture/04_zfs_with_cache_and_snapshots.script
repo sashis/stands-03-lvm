@@ -1,0 +1,401 @@
+Script started on Thu 14 Oct 2021 11:39:52 AM UTC
++ yum install https://zfsonlinux.org/epel/zfs-release.el7_5.noarch.rpm -y
+Loaded plugins: fastestmirror
+zfs-release.el7_5.noarch.rpm                                                                                         | 5.3 kB  00:00:00     
+Examining /var/tmp/yum-root-fnR641/zfs-release.el7_5.noarch.rpm: zfs-release-1-5.el7.centos.noarch
+Marking /var/tmp/yum-root-fnR641/zfs-release.el7_5.noarch.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package zfs-release.noarch 0:1-5.el7.centos will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+============================================================================================================================================
+ Package                       Arch                     Version                           Repository                                   Size
+============================================================================================================================================
+Installing:
+ [1mzfs-release(B[m                   noarch                   1-5.el7.centos                    /zfs-release.el7_5.noarch                   2.9 k
+
+Transaction Summary
+============================================================================================================================================
+Install  1 Package
+
+Total size: 2.9 k
+Installed size: 2.9 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : zfs-release-1-5.el7.centos.noarch [                                                                                    ] 1/1  Installing : zfs-release-1-5.el7.centos.noarch [##############################################                                      ] 1/1  Installing : zfs-release-1-5.el7.centos.noarch [################################################################################    ] 1/1  Installing : zfs-release-1-5.el7.centos.noarch                                                                                        1/1 
+  Verifying  : zfs-release-1-5.el7.centos.noarch                                                                                        1/1 
+
+Installed:
+  zfs-release.noarch 0:1-5.el7.centos                                                                                                       
+
+Complete!
++ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
++ yum-config-manager --disable zfs
+Loaded plugins: fastestmirror
+================================================================ repo: zfs =================================================================
+[zfs]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = http://download.zfsonlinux.org/epel/7.5/x86_64/
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/zfs
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 0
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/zfs/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/zfs/gpgdir
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
+hdrdir = /var/cache/yum/x86_64/7/zfs/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 604800
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = 
+mirrorlist_expire = 86400
+name = ZFS on Linux for EL7 - dkms
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/zfs
+pkgdir = /var/cache/yum/x86_64/7/zfs/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = zfs/x86_64
+ui_repoid_vars = releasever,
+   basearch
+username = 
+
++ yum-config-manager --enable zfs-kmod
+Loaded plugins: fastestmirror
+============================================================== repo: zfs-kmod ==============================================================
+[zfs-kmod]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = http://download.zfsonlinux.org/epel/7.5/kmod/x86_64/
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/zfs-kmod
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 1
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/zfs-kmod/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/zfs-kmod/gpgdir
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
+hdrdir = /var/cache/yum/x86_64/7/zfs-kmod/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 604800
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = 
+mirrorlist_expire = 86400
+name = ZFS on Linux for EL7 - kmod
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/zfs-kmod
+pkgdir = /var/cache/yum/x86_64/7/zfs-kmod/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = zfs-kmod/x86_64
+ui_repoid_vars = releasever,
+   basearch
+username = 
+
++ yum install zfs -y
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.logol.ru
+ * extras: centos-mirror.rbc.ru
+ * updates: mirrors.datahouse.ru
+zfs-kmod                                                                                                             | 2.9 kB  00:00:00     
+zfs-kmod/x86_64/primary_db                              0% [                                              ]  0.0 B/s |    0 B  --:--:-- ETA zfs-kmod/x86_64/primary_db                              29% [=============                                ]  0.0 B/s |  42 kB  --:--:-- ETA zfs-kmod/x86_64/primary_db                                                                                           | 145 kB  00:00:01     
+Resolving Dependencies
+--> Running transaction check
+---> Package zfs.x86_64 0:0.7.12-1.el7_5 will be installed
+--> Processing Dependency: zfs-kmod = 0.7.12 for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: spl = 0.7.12 for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libzpool2 = 0.7.12 for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libzfs2 = 0.7.12 for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libuutil1 = 0.7.12 for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libnvpair1 = 0.7.12 for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: sysstat for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libzpool.so.2()(64bit) for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libzfs_core.so.1()(64bit) for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libzfs.so.2()(64bit) for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libuutil.so.1()(64bit) for package: zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: libnvpair.so.1()(64bit) for package: zfs-0.7.12-1.el7_5.x86_64
+--> Running transaction check
+---> Package kmod-zfs.x86_64 0:0.7.12-1.el7_5 will be installed
+--> Processing Dependency: ksym(zone_get_hostid) = 0xba3e2d71 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(zio_arena) = 0xb0364551 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(z_uncompress) = 0xd8b5eb52 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(z_compress_level) = 0x55de2e28 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(xdrmem_create) = 0xddd4a3d3 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_set_pwd) = 0xf7b48661 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_seek) = 0xa25d7708 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_releasef) = 0x65f3602b for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_rdwr) = 0xda0b5604 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_openat) = 0x584f0fa4 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_open) = 0x6cd72a01 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_mode_to_vtype) = 0x5ecf6f91 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_getf) = 0x017c4698 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_getattr) = 0xa518c2ad for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_fsync) = 0xb7b69dab for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vn_close) = 0x19302b91 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vmem_size) = 0x29eec2f0 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(vcmn_err) = 0x52778ec7 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(tsd_set) = 0x1285cb78 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(tsd_get) = 0x3323ccb1 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(tsd_destroy) = 0x8eb0a41f for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(tsd_create) = 0x958b84e3 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_wait_outstanding) = 0x68c4f9da for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_wait_id) = 0x24bd0182 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_wait) = 0x2e2e322f for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_member) = 0xf12d1676 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_init_ent) = 0xa08322cc for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_dispatch_ent) = 0x5dbd6138 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_dispatch_delay) = 0xdb77dd01 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_dispatch) = 0x589fea99 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_destroy) = 0x6b220bcb for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_create) = 0xcd44eb00 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(taskq_cancel_id) = 0xd92839b8 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(system_taskq) = 0x05f08dbe for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(system_delay_taskq) = 0x6af554dd for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(strfree) = 0x1b8f1d1e for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(strdup) = 0xc810362f for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_vmem_zalloc) = 0x6c2c274e for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_vmem_free) = 0x0ff749bc for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_vmem_alloc) = 0xfe172afe for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_panic) = 0xbc32eee7 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_zalloc) = 0x9b0325e8 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_free) = 0x6d16801a for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_cache_set_move) = 0xe17fb160 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_cache_reap_now) = 0x83aa5282 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_cache_free) = 0xe5779a08 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_cache_destroy) = 0x0b51262a for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_cache_create) = 0xf0202554 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_cache_alloc) = 0xd1aa34d4 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(spl_kmem_alloc) = 0xb342d16a for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(rwsem_tryupgrade) = 0x4be94236 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(rootdir) = 0x0e7813a4 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(random_get_pseudo_bytes) = 0x2109bc3a for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(p0) = 0xbccac85e for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kstat_waitq_exit) = 0x6127b911 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kstat_waitq_enter) = 0xcc762837 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kstat_runq_exit) = 0xcc8e80f8 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kstat_runq_enter) = 0x150ddbd2 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kobj_read_file) = 0xa2724b1e for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kobj_open_file) = 0xa88e7496 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kobj_get_filesize) = 0x89291f9f for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kobj_close_file) = 0x16837e70 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kmem_vasprintf) = 0x064623de for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kmem_debugging) = 0x75907276 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(kmem_asprintf) = 0xaa65a555 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(groupmember) = 0x8a51e16a for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(ddi_strtoull) = 0xf68905fd for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(ddi_strtol) = 0x82fe53e1 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(ddi_copyout) = 0x431a8a2c for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(ddi_copyin) = 0xd8e07779 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(cv_timedwait_sig_hires) = 0x63aee8aa for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(cv_timedwait_hires) = 0x8da76a54 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crhold) = 0xbd6bcd08 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crgetuid) = 0x72cf8c8b for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crgetruid) = 0xce6d7d76 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crgetngroups) = 0xbaeceadd for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crgetgroups) = 0x3098be9f for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crgetgid) = 0x1b27ac37 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crgetfsuid) = 0x10761aa5 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crgetfsgid) = 0xe0b0dd84 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(crfree) = 0xf76b5740 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(cmn_err) = 0x82027a4c for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__thread_exit) = 0x3896a905 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__thread_create) = 0x47805038 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__kstat_set_raw_ops) = 0xbf5f302a for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__kstat_install) = 0xe4db3c03 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__kstat_delete) = 0x79478dcc for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__kstat_create) = 0x235e9bea for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_wait_sig) = 0x24f9a150 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_wait_io) = 0x1305f576 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_wait) = 0x3e43bb06 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_timedwait_sig) = 0xef8c32c0 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_signal) = 0xadd3247e for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_init) = 0x0f1e4497 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_destroy) = 0x459a3b05 for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: ksym(__cv_broadcast) = 0xb75ecbeb for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+--> Processing Dependency: spl-kmod for package: kmod-zfs-0.7.12-1.el7_5.x86_64
+---> Package libnvpair1.x86_64 0:0.7.12-1.el7_5 will be installed
+---> Package libuutil1.x86_64 0:0.7.12-1.el7_5 will be installed
+---> Package libzfs2.x86_64 0:0.7.12-1.el7_5 will be installed
+---> Package libzpool2.x86_64 0:0.7.12-1.el7_5 will be installed
+---> Package spl.x86_64 0:0.7.12-1.el7_5 will be installed
+---> Package sysstat.x86_64 0:10.1.5-19.el7 will be installed
+--> Processing Dependency: libsensors.so.4()(64bit) for package: sysstat-10.1.5-19.el7.x86_64
+--> Running transaction check
+---> Package kmod-spl.x86_64 0:0.7.12-1.el7_5 will be installed
+---> Package lm_sensors-libs.x86_64 0:3.4.0-8.20160601gitf9185e5.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+============================================================================================================================================
+ Package                          Arch                    Version                                           Repository                 Size
+============================================================================================================================================
+Installing:
+ zfs                              x86_64                  0.7.12-1.el7_5                                    zfs-kmod                  414 k
+Installing for dependencies:
+ kmod-spl                         x86_64                  0.7.12-1.el7_5                                    zfs-kmod                  114 k
+ kmod-zfs                         x86_64                  0.7.12-1.el7_5                                    zfs-kmod                  896 k
+ libnvpair1                       x86_64                  0.7.12-1.el7_5                                    zfs-kmod                   31 k
+ libuutil1                        x86_64                  0.7.12-1.el7_5                                    zfs-kmod                   36 k
+ libzfs2                          x86_64                  0.7.12-1.el7_5                                    zfs-kmod                  131 k
+ libzpool2                        x86_64                  0.7.12-1.el7_5                                    zfs-kmod                  595 k
+ lm_sensors-libs                  x86_64                  3.4.0-8.20160601gitf9185e5.el7                    base                       42 k
+ spl                              x86_64                  0.7.12-1.el7_5                                    zfs-kmod                   29 k
+ sysstat                          x86_64                  10.1.5-19.el7                                     base                      315 k
+
+Transaction Summary
+============================================================================================================================================
+Install  1 Package (+9 Dependent packages)
+
+Total download size: 2.5 M
+Installed size: 9.4 M
+Downloading packages:
+(2/10): kmod-zfs-0.7.12-1.el7_5.x86_64.rpm              0% [                                              ]  0.0 B/s |    0 B  --:--:-- ETA (2/10): kmod-zfs-0.7.12-1.el7_5.x86_64.rpm              1% [-                                             ]  0.0 B/s |  43 kB  --:--:-- ETA (1/10): kmod-spl-0.7.12-1.el7_5.x86_64.rpm                                                                           | 114 kB  00:00:01     
+(3/10): libnvpair1-0.7.12-1.el7_5.x86_64.rpm            6% [==-                                           ] 133 kB/s | 157 kB  00:00:18 ETA (2/10): libnvpair1-0.7.12-1.el7_5.x86_64.rpm                                                                         |  31 kB  00:00:00     
+(3/10): libuutil1-0.7.12-1.el7_5.x86_64.rpm                                                                          |  36 kB  00:00:00     
+(4/10): kmod-zfs-0.7.12-1.el7_5.x86_64.rpm              14% [======-                                      ] 169 kB/s | 388 kB  00:00:13 ETA (4/10): kmod-zfs-0.7.12-1.el7_5.x86_64.rpm              26% [============                                 ] 222 kB/s | 703 kB  00:00:08 ETA (4/10): libzfs2-0.7.12-1.el7_5.x86_64.rpm                                                                            | 131 kB  00:00:00     
+(5/10): kmod-zfs-0.7.12-1.el7_5.x86_64.rpm                                                                           | 896 kB  00:00:02     
+(6/10): lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64.rpm                                                    |  42 kB  00:00:00     
+(7/10): spl-0.7.12-1.el7_5.x86_64.rpm                                                                                |  29 kB  00:00:00     
+(8/10): sysstat-10.1.5-19.el7.x86_64.rpm                                                                             | 315 kB  00:00:00     
+(10/10): zfs-0.7.12-1.el7_5.x86_64.rpm                  80% [====================================         ] 470 kB/s | 2.1 MB  00:00:01 ETA (9/10): libzpool2-0.7.12-1.el7_5.x86_64.rpm                                                                          | 595 kB  00:00:00     
+(10/10): zfs-0.7.12-1.el7_5.x86_64.rpm                  95% [===========================================  ] 455 kB/s | 2.4 MB  00:00:00 ETA (10/10): zfs-0.7.12-1.el7_5.x86_64.rpm                  96% [===========================================  ] 419 kB/s | 2.4 MB  00:00:00 ETA (10/10): zfs-0.7.12-1.el7_5.x86_64.rpm                  96% [===========================================- ] 389 kB/s | 2.5 MB  00:00:00 ETA (10/10): zfs-0.7.12-1.el7_5.x86_64.rpm                  99% [============================================-] 370 kB/s | 2.5 MB  00:00:00 ETA (10/10): zfs-0.7.12-1.el7_5.x86_64.rpm                                                                               | 414 kB  00:00:02     
+--------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                       501 kB/s | 2.5 MB  00:00:05     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libuutil1-0.7.12-1.el7_5.x86_64 [                                                                                    ]  1/10  Installing : libuutil1-0.7.12-1.el7_5.x86_64 [#####################################################################               ]  1/10  Installing : libuutil1-0.7.12-1.el7_5.x86_64 [################################################################################### ]  1/10  Installing : libuutil1-0.7.12-1.el7_5.x86_64                                                                                         1/10 
+  Installing : libnvpair1-0.7.12-1.el7_5.x86_64 [                                                                                   ]  2/10  Installing : libnvpair1-0.7.12-1.el7_5.x86_64 [################################################################                   ]  2/10  Installing : libnvpair1-0.7.12-1.el7_5.x86_64 [################################################################################## ]  2/10  Installing : libnvpair1-0.7.12-1.el7_5.x86_64                                                                                        2/10 
+  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [                                                                                    ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [##                                                                                  ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#####                                                                               ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#######                                                                             ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [##########                                                                          ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [############                                                                        ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [###############                                                                     ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#################                                                                   ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [####################                                                                ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [######################                                                              ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#########################                                                           ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [###########################                                                         ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [##############################                                                      ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [################################                                                    ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [###################################                                                 ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#####################################                                               ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [########################################                                            ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [##########################################                                          ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#############################################                                       ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [###############################################                                     ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [##################################################                                  ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [####################################################                                ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#######################################################                             ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#########################################################                           ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [############################################################                        ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [###############################################################                     ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#################################################################                   ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [####################################################################                ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [######################################################################              ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [#########################################################################           ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [###########################################################################         ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [##############################################################################      ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [################################################################################    ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64 [################################################################################### ]  3/10  Installing : libzpool2-0.7.12-1.el7_5.x86_64                                                                                         3/10 
+  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [                                                                                     ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [###########                                                                          ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [######################                                                               ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [################################                                                     ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [###########################################                                          ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [#######################################################                              ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [##################################################################                   ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [#############################################################################        ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64 [#################################################################################### ]  4/10  Installing : kmod-spl-0.7.12-1.el7_5.x86_64                                                                                          4/10 
+  Installing : spl-0.7.12-1.el7_5.x86_64 [                                                                                          ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64 [#########                                                                                 ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64 [############################################                                              ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64 [#############################################                                             ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64 [#############################################################################             ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64 [################################################################################          ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64 [#################################################################################         ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64 [######################################################################################### ]  5/10  Installing : spl-0.7.12-1.el7_5.x86_64                                                                                               5/10 
+  Installing : libzfs2-0.7.12-1.el7_5.x86_64 [                                                                                      ]  6/10  Installing : libzfs2-0.7.12-1.el7_5.x86_64 [################                                                                      ]  6/10  Installing : libzfs2-0.7.12-1.el7_5.x86_64 [#################################                                                     ]  6/10  Installing : libzfs2-0.7.12-1.el7_5.x86_64 [##################################################                                    ]  6/10  Installing : libzfs2-0.7.12-1.el7_5.x86_64 [###################################################################                   ]  6/10  Installing : libzfs2-0.7.12-1.el7_5.x86_64 [###############################################################################       ]  6/10  Installing : libzfs2-0.7.12-1.el7_5.x86_64 [##################################################################################### ]  6/10  Installing : libzfs2-0.7.12-1.el7_5.x86_64                                                                                           6/10 
+  Installing : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64 [                                                              ]  7/10  Installing : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64 [############################################################# ]  7/10  Installing : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64                                                                   7/10 
+  Installing : sysstat-10.1.5-19.el7.x86_64 [                                                                                       ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###                                                                                    ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [########                                                                               ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [############                                                                           ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [################                                                                       ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [####################                                                                   ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#####################                                                                  ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##########################                                                             ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###############################                                                        ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#################################                                                      ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#######################################                                                ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#########################################                                              ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#############################################                                          ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##############################################                                         ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##################################################                                     ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [####################################################                                   ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [########################################################                               ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##########################################################                             ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###########################################################                            ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [############################################################                           ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##############################################################                         ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###############################################################                        ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [################################################################                       ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#################################################################                      ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##################################################################                     ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###################################################################                    ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [####################################################################                   ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#####################################################################                  ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [######################################################################                 ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#######################################################################                ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [########################################################################               ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#########################################################################              ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##########################################################################             ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###########################################################################            ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [############################################################################           ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#############################################################################          ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##############################################################################         ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###############################################################################        ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [################################################################################       ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#################################################################################      ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [##################################################################################     ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###################################################################################    ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [####################################################################################   ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [#####################################################################################  ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64 [###################################################################################### ]  8/10  Installing : sysstat-10.1.5-19.el7.x86_64                                                                                            8/10 
+  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [                                                                                     ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##                                                                                   ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [####                                                                                 ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#####                                                                                ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [######                                                                               ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [########                                                                             ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#########                                                                            ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###########                                                                          ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#############                                                                        ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##############                                                                       ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [################                                                                     ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#################                                                                    ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##################                                                                   ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###################                                                                  ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#####################                                                                ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [######################                                                               ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#######################                                                              ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#########################                                                            ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##########################                                                           ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [############################                                                         ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##############################                                                       ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###############################                                                      ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#################################                                                    ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##################################                                                   ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###################################                                                  ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#####################################                                                ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [######################################                                               ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#######################################                                              ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [########################################                                             ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##########################################                                           ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###########################################                                          ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#############################################                                        ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##############################################                                       ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###############################################                                      ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#################################################                                    ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##################################################                                   ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###################################################                                  ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [####################################################                                 ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [######################################################                               ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [########################################################                             ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##########################################################                           ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###########################################################                          ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#############################################################                        ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##############################################################                       ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###############################################################                      ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [################################################################                     ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##################################################################                   ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [####################################################################                 ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [######################################################################               ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#######################################################################              ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#########################################################################            ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###########################################################################          ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#############################################################################        ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##############################################################################       ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###############################################################################      ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [################################################################################     ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [##################################################################################   ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [###################################################################################  ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64 [#################################################################################### ]  9/10  Installing : kmod-zfs-0.7.12-1.el7_5.x86_64                                                                                          9/10 
+  Installing : zfs-0.7.12-1.el7_5.x86_64 [                                                                                          ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#                                                                                         ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##                                                                                        ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [########                                                                                  ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##########                                                                                ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###############                                                                           ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##################                                                                        ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [######################                                                                    ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##########################                                                                ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###########################                                                               ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#############################                                                             ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###############################                                                           ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [####################################                                                      ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#########################################                                                 ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###########################################                                               ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#############################################                                             ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#################################################                                         ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [######################################################                                    ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [########################################################                                  ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#########################################################                                 ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##########################################################                                ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [############################################################                              ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#############################################################                             ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##############################################################                            ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###############################################################                           ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [################################################################                          ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#################################################################                         ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##################################################################                        ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###################################################################                       ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [####################################################################                      ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#####################################################################                     ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [######################################################################                    ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#######################################################################                   ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [########################################################################                  ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#########################################################################                 ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##########################################################################                ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###########################################################################               ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [############################################################################              ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#############################################################################             ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##############################################################################            ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###############################################################################           ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [################################################################################          ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#################################################################################         ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [##################################################################################        ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [###################################################################################       ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [####################################################################################      ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#####################################################################################     ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [#######################################################################################   ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [########################################################################################  ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64 [######################################################################################### ] 10/10  Installing : zfs-0.7.12-1.el7_5.x86_64                                                                                              10/10 
+  Verifying  : libzfs2-0.7.12-1.el7_5.x86_64                                                                                           1/10 
+  Verifying  : spl-0.7.12-1.el7_5.x86_64                                                                                               2/10 
+  Verifying  : sysstat-10.1.5-19.el7.x86_64                                                                                            3/10 
+  Verifying  : zfs-0.7.12-1.el7_5.x86_64                                                                                               4/10 
+  Verifying  : libzpool2-0.7.12-1.el7_5.x86_64                                                                                         5/10 
+  Verifying  : libuutil1-0.7.12-1.el7_5.x86_64                                                                                         6/10 
+  Verifying  : kmod-spl-0.7.12-1.el7_5.x86_64                                                                                          7/10 
+  Verifying  : kmod-zfs-0.7.12-1.el7_5.x86_64                                                                                          8/10 
+  Verifying  : libnvpair1-0.7.12-1.el7_5.x86_64                                                                                        9/10 
+  Verifying  : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.el7.x86_64                                                                  10/10 
+
+Installed:
+  zfs.x86_64 0:0.7.12-1.el7_5                                                                                                               
+
+Dependency Installed:
+  kmod-spl.x86_64 0:0.7.12-1.el7_5                             kmod-zfs.x86_64 0:0.7.12-1.el7_5      libnvpair1.x86_64 0:0.7.12-1.el7_5     
+  libuutil1.x86_64 0:0.7.12-1.el7_5                            libzfs2.x86_64 0:0.7.12-1.el7_5       libzpool2.x86_64 0:0.7.12-1.el7_5      
+  lm_sensors-libs.x86_64 0:3.4.0-8.20160601gitf9185e5.el7      spl.x86_64 0:0.7.12-1.el7_5           sysstat.x86_64 0:10.1.5-19.el7         
+
+Complete!
++ modprobe zfs
++ zpool create storage sdb cache sde
++ zpool status storage
+  pool: storage
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	storage     ONLINE       0     0     0
+	  sdb       ONLINE       0     0     0
+	cache
+	  sde       ONLINE       0     0     0
+
+errors: No known data errors
++ zfs create storage/opt -o mountpoint=/opt
++ touch /opt/file1 /opt/file2 /opt/file3 /opt/file4 /opt/file5 /opt/file6 /opt/file7 /opt/file8 /opt/file9 /opt/file10 /opt/file11 /opt/file12 /opt/file13 /opt/file14 /opt/file15 /opt/file16 /opt/file17 /opt/file18 /opt/file19 /opt/file20
++ ls /opt
+file1	file11	file13	file15	file17	file19	file20	file4  file6  file8
+file10	file12	file14	file16	file18	file2	file3	file5  file7  file9
++ zfs snapshot storage/opt@snap01
++ rm -f /opt/file1 /opt/file10 /opt/file11 /opt/file12 /opt/file13 /opt/file14 /opt/file15 /opt/file16 /opt/file17 /opt/file18 /opt/file19 /opt/file2 /opt/file20 /opt/file3 /opt/file4 /opt/file5 /opt/file6 /opt/file7 /opt/file8 /opt/file9
++ ls /opt
++ zfs rollback storage/opt@snap01
++ ls /opt
+file1	file11	file13	file15	file17	file19	file20	file4  file6  file8
+file10	file12	file14	file16	file18	file2	file3	file5  file7  file9
++ zfs destroy storage/opt@snap01
+
+Script done on Thu 14 Oct 2021 11:41:42 AM UTC
